@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+    font-family: Georgia, Garamond, serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.sketchpad {
+    width: 30%;
+}
+
+.flexRow {
+    display: flex;
+}
+
+.square {
+    /* width and height can shrink or grow based on their content or their parent’s size 
+    and as a result it’s most likely that items don’t stay square.
+    Setting aspect-ratio to 1 / 1 changes the height dynamically while your item’s width scales
+    no width nor height set, since we are in flex layout and flex-grow is set to 1 
+    flex: 1 0 auto; , doing the sizing job */
+    flex: 1 0 auto;
+    aspect-ratio: 1 / 1;
+    outline: 0.5px solid red;
+}
+
+.newSketchPadBtn {
+    background-color: #3882f6;
+    color: #F9FAF8;
+    border: 2px solid white;
+    min-width: 100px;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.logo {
+    width: 15%;
+}
